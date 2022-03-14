@@ -1,0 +1,35 @@
+table tr:nth-child(odd) td{
+    
+}
+
+table tr:nth-child(even) td{
+    background: #f0f0f5;
+}
+
+.currency {
+    text-align: right;
+    width: 100;
+}
+
+.importantCurrency {
+    font-weight: bold;
+}
+
+.nameOfExpense {
+    width: 250px;
+}
+
+
+#inputValues {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#typeOfExpenseInput {
+    flex: 1 1;
+}
+
+#typeOfExpenseValueInput {
+    flex: 1 1;
+}

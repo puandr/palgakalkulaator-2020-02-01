@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Palgakalkulaator</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="wholePage">
+            <div id="inputValues">
+                <form name="expenseInputForm">
+                        <div id="typeOfExpenseInput">
+                            <input type="radio" name = "typeOfExpense" value = "netto" id = "typeOfExpenseNetto" checked="checked"> Neto palk <br>
+                            <input type="radio" name = "typeOfExpense" value = "brutto" id = "typeOfExpenseBrutto"> Bruto palk<br>
+                            <!-- <input type="radio" name = "typeOfExpense" value = "employer" id = "typeOfExpenseEmployer"> Tööandja kulu<br> -->
+                        </div>
+            
+                        <div div id="typeOfExpenseValueInput">
+                            <input type="number" id="amountOfExpenseInput">        
+                        </div>
+                        <div>
+                            <input type="checkbox" id="considerTaxFreeCheckbox" name="considerTaxFreeCheckbox" value="taxFree" onclick="calculationBasedOnInput()" checked>Arvesta maksuvaba tulu <br>
+                            <input type="checkbox" id="employerUnemploymentCheckbox" name="employerUnemploymentCheckbox" value="employerUnemployment" onclick="calculationBasedOnInput()" checked>Tööandja töötuskindlustusmakse (0.8%)<br>
+                            <input type="checkbox" id="employeeUnemploymentCheckbox" name="employeeUnemploymentCheckbox" value="employeeUnemployment" onclick="calculationBasedOnInput()" checked>Töötaja töötuskindlustusmakse (1.6%)<br>
+                            <input type="checkbox" id="fundedPensionCheckbox" name="fundedPensionCheckbox" value="fundedPension" onclick="calculationBasedOnInput()" checked>Kogumispension (2. samas)<br>                      
+
+                        </div>  
+                </form>
+            </div>
+        </div>
+
+            <div id="calculationOutput">
+                <table>            
+                    <tr>
+                        <td class="nameOfExpense">Tööandja kulu kokku (palgafond)</td>
+                        <td id="employerExpense" class="currency importantCurrency"> </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="nameOfExpense">Sotsiaalmaks</td class="nameOfExpense">
+                        <td id="socialTax"  class="currency"> </td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Töötuskindlustusmakse (tööandja)</td class="nameOfExpense">
+                        <td id="unemploymentEmployer" class="currency"> </td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Brutopalk</td class="nameOfExpense">
+                        <td id="brutto" class="currency importantCurrency"></td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Kogumispension (II sammas)</td class="nameOfExpense">
+                        <td id="fundedPension" class="currency"> </td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Töötuskindlustusmakse (töötaja)</td class="nameOfExpense">
+                        <td id="unemploymentEmployee" class="currency"> </td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Tulumaks</td class="nameOfExpense">
+                        <td id="incomeTax" class="currency"> </td>
+                    </tr>
+ 
+                    <tr>
+                        <td class="nameOfExpense">Netopalk</td class="nameOfExpense">
+                        <td id="netto" class="currency importantCurrency"> </td>
+                    </tr>
+                    <tr>
+                        <td><br> </td>
+                        <td>  </td>
+                    </tr>
+                    <tr>
+                        <td class="nameOfExpense">Maksuvaba tulu</td class="nameOfExpense">
+                        <td id="taxFreeIncome" class="currency">  </td>
+                    </tr>
+                    
+                </table>
+
+            </div>
+
+        <script src="calculateSalary.js"></script>
+        </div>
+    </body>
+
+</html>
